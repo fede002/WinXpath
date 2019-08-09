@@ -44,10 +44,10 @@ namespace WinXpath
         private void guardarEnArchivo(string resultado) {            
             String newLine = "";
             
-            System.IO.StreamWriter   stream = System.IO.File.CreateText(this.txArchivoResultado.Text  );            
+            System.IO.StreamWriter   stream = System.IO.File.AppendText(this.txArchivoResultado.Text);            
             newLine = resultado + ";" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss")   ;
             guardarLog("Escribe el resultado: " + resultado + " en el archivo: " + this.txArchivoResultado.Text   );
-            stream.WriteLine(newLine);
+            stream.WriteLine(newLine);            
             stream.Close();
         }
 
@@ -72,7 +72,7 @@ namespace WinXpath
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
             HtmlAgilityPack.HtmlDocument htmldocu = new HtmlAgilityPack.HtmlDocument();
             try
             {                       
@@ -89,10 +89,11 @@ namespace WinXpath
             try
             {
 
-
                 if (System.IO.File.Exists(this.txArchivoResultado.Text))
                 {
                     System.IO.File.Delete(this.txArchivoResultado.Text);
+                    System.IO.StreamWriter stream = System.IO.File.CreateText(this.txArchivoResultado.Text);
+                    stream.Close();
                 }
 
                 //dolar
@@ -115,7 +116,7 @@ namespace WinXpath
                                          
                 }
                 //euro
-                if (this.txXpath.Text != "")
+                if (this.txXpath2.Text != "")
                 {
                     string resultado = htmldocu.DocumentNode.SelectSingleNode(this.txXpath2.Text).InnerHtml;
                     //si tiene datos que validar
