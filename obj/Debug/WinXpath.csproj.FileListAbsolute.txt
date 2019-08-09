@@ -1,0 +1,15 @@
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\bin\Debug\WinXpath.exe.config
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\bin\Debug\WinXpath.exe
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\bin\Debug\WinXpath.pdb
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\bin\Debug\HtmlAgilityPack.dll
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\bin\Debug\HtmlAgilityPack.pdb
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\bin\Debug\HtmlAgilityPack.xml
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\obj\Debug\WinXpath.csprojResolveAssemblyReference.cache
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\obj\Debug\WinXpath.Form1.resources
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\obj\Debug\WinXpath.Properties.Resources.resources
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\obj\Debug\WinXpath.csproj.GenerateResource.Cache
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\obj\Debug\WinXpath.exe
+C:\Desarrollo\PadronMedicacion\trunk\WinXpath\WinXpath\obj\Debug\WinXpath.pdb
+C:\Desarrollo\dotNET\WinXpath\bin\Debug\WinXpath.exe.config
+C:\Desarrollo\dotNET\WinXpath\obj\Debug\WinXpath.exe
+C:\Desarrollo\dotNET\WinXpath\obj\Debug\WinXpath.pdb
