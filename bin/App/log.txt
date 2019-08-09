@@ -1,0 +1,4 @@
+2019_08_09_14_05_29;Inicio de proceso
+2019_08_09_14_05_30;Compara el valor:Banco Nación contra el resultado: Banco Nación
+2019_08_09_14_05_30;Escribe el resultado: $ 46,40 en el archivo: c:\borrar\resultado_xpath.txt
+2019_08_09_14_05_30;Fin de proceso

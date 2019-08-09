@@ -28,6 +28,14 @@ namespace WinXpath
             this.txXpath.Text = ConfigurationManager.AppSettings["xpath_busqueda"];
             this.txXpathVal.Text = ConfigurationManager.AppSettings["xpath_valida"];
             this.txXpathValor.Text = ConfigurationManager.AppSettings["xpath_valida_valor"];
+
+
+            this.txXpath2.Text = ConfigurationManager.AppSettings["xpath_busqueda2"];
+            this.txXpathVal2.Text = ConfigurationManager.AppSettings["xpath_valida2"];
+            this.txXpathValor2.Text = ConfigurationManager.AppSettings["xpath_valida_valor2"];
+
+
+
             this.txArchivoResultado.Text = ConfigurationManager.AppSettings["archivo_resultado"];
             this._inicioSolo = ConfigurationManager.AppSettings["inicioYCierraSolo"];
             this._archivoLog = AppDomain.CurrentDomain.BaseDirectory + "log.txt";              
@@ -35,10 +43,7 @@ namespace WinXpath
 
         private void guardarEnArchivo(string resultado) {            
             String newLine = "";
-            if (System.IO.File.Exists(this.txArchivoResultado.Text)) {
-                System.IO.File.Delete(this.txArchivoResultado.Text);
-            }
-
+            
             System.IO.StreamWriter   stream = System.IO.File.CreateText(this.txArchivoResultado.Text  );            
             newLine = resultado + ";" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss")   ;
             guardarLog("Escribe el resultado: " + resultado + " en el archivo: " + this.txArchivoResultado.Text   );
@@ -83,6 +88,14 @@ namespace WinXpath
 
             try
             {
+
+
+                if (System.IO.File.Exists(this.txArchivoResultado.Text))
+                {
+                    System.IO.File.Delete(this.txArchivoResultado.Text);
+                }
+
+                //dolar
                 if (this.txXpath.Text != "")
                 {
                     string resultado = htmldocu.DocumentNode.SelectSingleNode(this.txXpath.Text).InnerHtml;
@@ -101,6 +114,27 @@ namespace WinXpath
                     }
                                          
                 }
+                //euro
+                if (this.txXpath.Text != "")
+                {
+                    string resultado = htmldocu.DocumentNode.SelectSingleNode(this.txXpath2.Text).InnerHtml;
+                    //si tiene datos que validar
+                    if (this.txXpathValor2.Text != "")
+                    {
+                        string resultado_valida = htmldocu.DocumentNode.SelectSingleNode(this.txXpathVal2.Text).InnerHtml;
+                        guardarLog("Compara el valor:" + this.txXpathValor2.Text + " contra el resultado: " + resultado_valida);
+                        if (resultado_valida == this.txXpathValor2.Text)
+                        {
+                            guardarEnArchivo(resultado);
+                        }
+                    }
+                    else
+                    {
+                        guardarEnArchivo(resultado);
+                    }
+
+                }
+
             }
             catch (Exception ex)
             {

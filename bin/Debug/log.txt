@@ -16,3 +16,7 @@ YYYY0310000318;Fin de proceso
 2018_09_10_00_04_31;Compara el valor:Banco Nación contra el resultado: Banco Nación
 2018_09_10_00_04_31;Escribe el resultado: $ 37,60 en el archivo: c:\borrar\resultado_xpath.txt
 2018_09_10_00_04_31;Fin de proceso
+2019/08/09 14:09:26;Inicio de proceso
+2019/08/09 14:09:33;Error al guardar el datos:
+Referencia a objeto no establecida como instancia de un objeto.
+2019/08/09 14:09:33;Fin de proceso
